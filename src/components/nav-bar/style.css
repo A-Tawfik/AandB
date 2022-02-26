@@ -1,0 +1,22 @@
+.nav-bar{
+    width: 100vw;
+    height: 50px;
+    background: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar nav{
+    display:flex;
+    justify-content: space-around;
+    width: var(--website-width);
+    max-width: var(--website-max-width);
+    min-width: var(--website-min-width);
+}
+
+.nav-bar nav a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}

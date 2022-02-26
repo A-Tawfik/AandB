@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import bcryptjs from 'bcryptjs';
 
-function App() {
+import hash from './hash.json'
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
+import {
+  Home,
+  Contact,
+  Details,
+  RSVP,
+  Registry
+} from './views'
+
+import Header from './components/header'
+import NavBar from './components/nav-bar'
+
+const App = () => {
+  const [password, setPassword] = useState(localStorage.getItem('aAndBPass') || '')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {bcryptjs.compareSync(password, hash.hash) ?
+        <>     <Header />
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/details" element={<Details />} />
+            <Route path="/registry" element={<Registry />} />
+            <Route path="/rsvp" element={<RSVP />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes></> :
+        <form onSubmit={(e) => {
+          e.preventDefault()
+          localStorage.setItem('aAndBPass', e.target.elements['password'].value)
+          setPassword(e.target.elements['password'].value)
+        }}>
+          <input name='password' type='password' placeholder='Find the password on the invitation/save the date' />
+          <button type="submit">Submit</button>
+        </form>
+
+      }
+    </BrowserRouter>
   );
 }
 

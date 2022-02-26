@@ -1,0 +1,16 @@
+.header{
+    width: 100vw;
+    height: 85vh;
+    background-image: url('../../images/theare.jpg');
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.header h1{
+    transform: translateY(-5vh);
+    text-shadow: 1px 1px 1px black;
+}
