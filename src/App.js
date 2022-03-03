@@ -4,7 +4,7 @@ import bcryptjs from 'bcryptjs';
 import hash from './hash.json'
 
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -24,9 +24,10 @@ const App = () => {
   const [password, setPassword] = useState(localStorage.getItem('aAndBPass') || '')
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {bcryptjs.compareSync(password, hash.hash) ?
-        <>     <Header />
+        <>
+          <Header />
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -34,7 +35,8 @@ const App = () => {
             <Route path="/registry" element={<Registry />} />
             <Route path="/rsvp" element={<RSVP />} />
             <Route path="/contact" element={<Contact />} />
-          </Routes></> :
+          </Routes>
+        </> :
         <form onSubmit={(e) => {
           e.preventDefault()
           localStorage.setItem('aAndBPass', e.target.elements['password'].value)
@@ -45,7 +47,7 @@ const App = () => {
         </form>
 
       }
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
