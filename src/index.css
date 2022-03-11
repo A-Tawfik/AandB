@@ -1,12 +1,54 @@
 *, *::before, *::after {
   margin: 0;
-  --website-width: 60vw;
-  --website-max-width: 800px;
-  --website-min-width: 500px;
+  --width: 80vw;
+  --max-width: 800px;
+  --min-width: 375px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.content-wrapper{
+  /* background-color: #F8FAFB; */
+  display:flex;
+  justify-content: center;
+  position: relative;
+  overflow-y: visible;
+  z-index: 0;
+}
+
+/* .content-wrapper > img {
+  width: 40%;
+  min-width: 500px;
+  max-width: 700px;
+  opacity: 0.5;
+  z-index: -99999;
+}
+
+.content-wrapper > img:first-of-type {
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+.content-wrapper > img:nth-child(2) {
+  position:absolute;
+  transform:rotate(180deg);
+  bottom:0;
+  left:0;
+} */
+
+.content-wrapper > section:first-of-type{
+  width: var(--width);
+  max-width: var(--max-width);
+  min-width: var(--min-width);
 }
 
 
-
+@import './views/_password_page.css';
+@import './views/_home.css';
 
 @import './components/header/style.css';
-@import './components/nav-bar/style.css'
+@import './components/nav-bar/style.css';
+@import './components/footer_card/style.css';
+@import './components/nav_hamburger/style.css';
+@import './components/announce_card/style.css';
+@import './components/welcome_card/style.css';

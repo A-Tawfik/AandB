@@ -1,5 +1,4 @@
 .header{
-    width: 100vw;
     height: 85vh;
     background-image: url('../../images/theare.jpg');
     background-size: cover;
@@ -8,6 +7,10 @@
     align-items: center;
     justify-content: center;
     color: white;
+    position: relative;
+    z-index: 1;
+    border-radius: 60px;
+    margin: 10px;
 }
 
 .header h1{
