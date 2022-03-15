@@ -6,17 +6,12 @@
     justify-content: center;
     color: white;
     position: relative;
-    background-position: top;
-
+    background-position: center;
     z-index: 1;
-
-    
-    /* height: 85vh; */
-    /* border-radius: 60px; */
-    /* margin: 10px; */
 }
 
 .header.home-img{
+    background-position: top;
     background-image: url('../../images/home.jpg');
 }
 .header.registry-img{
