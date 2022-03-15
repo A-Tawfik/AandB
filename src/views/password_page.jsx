@@ -30,7 +30,9 @@ function PasswordPage({ setPassword }) {
           <input name='password' type='password' placeholder='Password' />
           {passFail && <sub className='validation'>Incorrect password, please try again</sub>}
         </div>
-        <button type="submit">Submit</button>
+        <div className='password__button'>
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </div>
 

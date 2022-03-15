@@ -22,9 +22,6 @@ import Header from './components/header'
 import NavBar from './components/nav-bar'
 import FooterCard from "./components/footer_card";
 
-import background1_1 from './images/background-1-1.jpg'
-import background1_2 from './images/background-1-2.jpg'
-
 const App = () => {
   const [password, setPassword] = useState(localStorage.getItem('aAndBPass') || '')
 

@@ -4,7 +4,7 @@ function Details() {
   return (
     <section className='details'>
       <CountdownCard />
-      <h2>Wedding Details coming soon, please check back again later...</h2>
+      <h2>Wedding details coming soon...</h2>
     </section>
   );
 }

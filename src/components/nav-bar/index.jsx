@@ -27,11 +27,11 @@ const NavBar = () => {
                 <Hamburger onClickCallback={toggleShowNav} />
                 <nav className={showNav ? 'show' : ''}>
                     <div className='close-nav' onClick={() => toggleShowNav()}><div className="inner"></div></div>
-                    <CustomLink to="/">Home</CustomLink>
-                    <CustomLink to="details">Details</CustomLink>
-                    <CustomLink to="registry">Registry</CustomLink>
-                    <CustomLink to="rsvp">RSVP</CustomLink>
-                    <CustomLink to="contact">Contact</CustomLink>
+                    <CustomLink onClick={() => setShowNav(false)} to="/">Home</CustomLink>
+                    <CustomLink onClick={() => setShowNav(false)} to="details">Details</CustomLink>
+                    <CustomLink onClick={() => setShowNav(false)} to="registry">Registry</CustomLink>
+                    <CustomLink onClick={() => setShowNav(false)} to="rsvp">RSVP</CustomLink>
+                    <CustomLink onClick={() => setShowNav(false)} to="contact">Contact</CustomLink>
                 </nav>
             </div>
         </div>

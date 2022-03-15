@@ -1,14 +1,4 @@
 .welcome-card{
     width: 100%;
-    margin-top: 100px;
     line-height: 2em;
-}
-
-.welcome-card h1{
-    margin-bottom:1em;
-}
-
-.welcome-card p{
-    font-size: 1.2rem;
-    font-weight: 100;
 }

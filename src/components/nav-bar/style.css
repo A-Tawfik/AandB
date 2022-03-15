@@ -29,33 +29,67 @@
 }
 
 nav .close-nav{
-    width: 50px;
+    width: calc(100% - 50px);
     height: 50px;
     margin: 25px;
     position:relative;
     display: none;
+    cursor: pointer;
 }
+
+
 
 .close-nav .inner{
     position:absolute;
     top:20px;
-    width: 100%;
+    right: 0;
+    width: 50px;
     height: 6px;
     margin: auto;
+    transition: 1.2s ease-in-out;
+ }
+
+ .close-nav:hover .inner{
+    width: 45px;
+    transform: rotate(720deg);
+    transition: 1.2s ease-in-out;
+
+ }
+
+ .close-nav .inner::after{
+    content:'';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
     transform: rotate(45deg);
     border-radius: 5px;
     background-color: black;
+    transition: 1.2s ease-in-out;
  }
+
+ .close-nav:hover .inner::after{
+    transform: rotate(23.5deg);
+    top: -8px;
+    transition: 1.2s ease-in-out;
+}
+
+ .close-nav:hover .inner::before{
+    transform: rotate(-23.5deg);
+    bottom: -8px;
+    transition: 1.2s ease-in-out;
+}
 
  .close-nav .inner::before{
     content:'';
     width: 100%;
     height: 100%;
+    bottom: 0;
     position: absolute;
-    transform: rotate(90deg);
+    transform: rotate(-45deg);
     border-radius: 5px;
     background-color: black;
-
+    transition: 1.2s ease-in-out;
  }
 
 

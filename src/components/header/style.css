@@ -1,19 +1,43 @@
 .header{
-    height: 85vh;
-    background-image: url('../../images/theare.jpg');
-    background-size: cover;
-    background-position: bottom;
+    height: 65vh;
+    background-size:cover;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     position: relative;
+    background-position: top;
+
     z-index: 1;
-    border-radius: 60px;
-    margin: 10px;
+
+    
+    /* height: 85vh; */
+    /* border-radius: 60px; */
+    /* margin: 10px; */
 }
 
+.header.home-img{
+    background-image: url('../../images/home.jpg');
+}
+.header.registry-img{
+    background-image: url('../../images/registry.jpeg');
+
+}
+.header.details-img{
+    background-image: url('../../images/details.jpeg');
+
+}
+.header.rsvp-img{
+    background-image: url('../../images/rsvp.jpeg');
+
+}
+.header.contact-img{
+    background-image: url('../../images/contact.jpeg');
+
+}
+
+
 .header h1{
-    transform: translateY(-5vh);
+    transform: translateY(-15vh);
     text-shadow: 1px 1px 1px black;
 }

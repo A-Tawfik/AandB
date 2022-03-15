@@ -1,7 +1,7 @@
 function RSVP() {
   return (
-    <section>
-        RSVP
+    <section className='rsvp'>
+      <h2>RSVP details coming soon...</h2>
     </section>
   );
 }
