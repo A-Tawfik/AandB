@@ -36,13 +36,12 @@ const TimeItem = ({ amount, label }) => {
 
 const calculateTimeLeft = () => {
     const endDate = `09/23/2022`
-    const timeOffset = 1
     const difference = +new Date(endDate) - +new Date();
     const timeLeft = {};
 
     if (difference > 0) {
         timeLeft['days'] = Math.floor(difference / (1000 * 60 * 60 * 24))
-        timeLeft['hours'] = Math.floor((difference / (1000 * 60 * 60)) % 24) + timeOffset
+        timeLeft['hours'] = Math.floor((difference / (1000 * 60 * 60)) % 24)
         timeLeft['minutes'] = Math.floor((difference / 1000 / 60) % 60)
         timeLeft['seconds'] = Math.floor((difference / 1000) % 60)
     }

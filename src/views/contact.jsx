@@ -102,26 +102,21 @@ function Contact() {
 export default Contact;
 
 
-const postFormData = async (formData) => {
-  const url = 'https://script.google.com/macros/s/AKfycbxvCQFBgR66TGbXBc9d2jC4XGwY5-Rv-83W6DBPPxrX1R4kKY-E2a92ZkDADPJZyjU9mA/exec'
+const postFormData = (formData) => {
+  const url = 'https://script.google.com/macros/s/AKfycbzUWz4luN9OVc0YvitpwQvanCK9LwOPa5aiMy7bBaTTVBcobMoiSLAA65ztuSFL6Rw1/exec'
   const settings = {
     method: 'POST',
-    body: JSON.stringify(formData),
     mode: 'no-cors',
-    credentials: 'include', // include, *same-origin, omit
     redirect: 'follow',
+    credentials: 'include', // include, *same-origin, omit
     headers: {
-      'Content-Type': 'text/plain;charset=utf-8',
+      'Content-Type': 'application/x-www-form-urlencoded',
     }
   };
   const queryParams = Object.keys(formData).map(key => {
     return `${encodeURIComponent(key)}=${encodeURIComponent(formData[key])}`
   }).join('&')
 
-  const response = await fetch(`${url}?${queryParams}`, settings)
-  if (response.ok) {
-    const data = await response.json()
-    return data
-  }
-  throw new Error('can\'t fetch data')
+  return fetch(`${url}?${queryParams}`, settings).then((res) => res).then((rep) => rep).catch(e => console.error(e))
+
 }
