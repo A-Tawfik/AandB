@@ -2,7 +2,7 @@ const DetailsCard = () => {
     return (
         <div className='details-card'>
             <center><p><h3> September 23, 2022 </h3>
-            at half past five in the evening</p>
+            at half past five in the evening </p>
             <p><h3> Jericho Terrace </h3>
             249 Jericho Turnpike 
             Mineola, NY 11501 </p>
