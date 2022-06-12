@@ -7,4 +7,9 @@
 .details-card iframe{
     width:100%;
     height: 200px;
+    margin-bottom: 2rem;
+}
+
+.details-card h2{
+    margin-bottom: .1rem;
 }
