@@ -7,7 +7,7 @@ const AccomodationsCard = () => {
                 <h3> Homewood Suites by Hilton Carle Place </h3>
                 <p> 40 Westbury Ave Carle Place, NY 11514 </p>
                 <p> 📞 (516) 747-0230 </p>
-                <p> Click <a href= "www.my-event.hilton.com/allitawfikwedding2022/">here</a> to make reservations online or call and mention Alli/Tawfik Wedding before 8/24/2022 </p>
+                <p> Click <a href="https://www.my-event.hilton.com/allitawfikwedding2022/" target="_">here</a> to make reservations online or call and mention Alli/Tawfik Wedding before 8/24/2022 </p>
                 <p> **This hotel is nearby the wedding venue. </p>
 
                 <h3> Adria Hotel & Conference </h3>
@@ -18,7 +18,7 @@ const AccomodationsCard = () => {
                 <h3> Fairfield Inn & Suites New York Queens/Fresh Meadows </h3>
                 <p> 183-31 Horace Harding Expy, Queens, NY 11365 </p>
                 <p> 📞 (718) 746-7230 </p>
-                <p> Click <a href = "https://www.marriott.com/events/start.mi?id=1649963233585&key=GRP">here</a> to make reservations online or call and mention Alli/Tawfik wedding before 9/1/2022 </p> 
+                <p> Click <a href = "https://www.marriott.com/events/start.mi?id=1649963233585&key=GRP" target="_">here</a> to make reservations online or call and mention Alli/Tawfik wedding before 9/1/2022 </p> 
         </div>
     );
 }
